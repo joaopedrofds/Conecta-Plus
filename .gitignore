@@ -1,0 +1,39 @@
+# Arquivos de banco de dados SQLite
+*.sqlite3
+db.sqlite3
+
+# Arquivos de migrações do Django
+/migrations/
+
+# Arquivos de logs
+/logs/
+
+# Arquivos estáticos coletados
+/staticfiles/
+
+
+# Arquivos de bytecode Python
+__pycache__/
+
+# Arquivos de configuração de IDE
+.idea/
+.vscode/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+Pipfile
+Pipfile.lock
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
