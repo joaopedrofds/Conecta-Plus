@@ -34,12 +34,14 @@ a {
 .logo {
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    justify-content: center;
+    margin: 1rem;
 }
 
 div.logo a {
     align-items: center;
     font-weight: bold;
+    font-size: larger;
     color: #030615;
 }
 
@@ -49,12 +51,14 @@ div.logo a {
 
 .menu-item {
     padding: 1rem 1rem;
+    margin: 1rem;
     color: #030615;
     font-weight: bold;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .menu-item:hover {
