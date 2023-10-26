@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from ConectaPlusapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('ConectaPlusapp.urls')),
+    #path('admin/', admin.site.urls),
+    #path('', include('ConectaPlusapp.urls')),
+    path('', views.pagina_inicial, name='pagina_inicial'),
+    path('projetos/', views.projetos, name='projetos'),
+    path('caçadores/', views.caçadores, name='caçadores'),
 ]
