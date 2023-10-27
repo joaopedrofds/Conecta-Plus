@@ -19,9 +19,10 @@ from django.urls import path, include
 from ConectaPlusapp import views
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
-    #path('', include('ConectaPlusapp.urls')),
+    path('admin/', admin.site.urls),
     path('', views.pagina_inicial, name='pagina_inicial'),
     path('projetos/', views.projetos, name='projetos'),
     path('caçadores/', views.caçadores, name='caçadores'),
+    path('inicio/', views.inicio, name='inicio'),
+    path('cadastro/', views.cadastro, name='cadastro'),
 ]

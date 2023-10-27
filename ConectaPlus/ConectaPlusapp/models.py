@@ -1,13 +1,20 @@
 from django.db import models
+from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 
-class Perfil(models.Model):
-    name    = models.CharField(max_length=50)
-    idade   = models.IntegerField(default=0)
+class Usuario(models.Model):
+    user        = models.OneToOneField(User, on_delete=models.CASCADE)
+    nome        = models.CharField(max_length=50, null=False)
+    sobrenome   = models.CharField(max_length=50, null=False)
+    phone       = models.CharField(default = "0000-0000", max_length=200,null=True)
+    email       = models.CharField(max_length=100, null=False)
+    senha       = models.CharField(max_length=50, null=False) 
+    date_created= models.DateTimeField(auto_now_add=True, null=True)
     
     def __str__(self):
-        return self.name
+        return self.user.username
 
 
 class Projeto(models.Model):
