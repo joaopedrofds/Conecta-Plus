@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http.response import HttpResponse 
 from .form import CadastroForm
+from .models import Voluntario
 
 
 def teste(request):
@@ -33,3 +34,9 @@ def cadastro(request):
     return render(request, 'paginas/cadastro.html', {
         'form': form
     })
+
+def voluntarios(request):
+    voluntarios = Voluntario.objects.all()
+    context = {'voluntarios': voluntarios}
+    return render(request, 'paginas/voluntarios.html', context)
+

@@ -1,0 +1,55 @@
+/* Estilos para os cards */
+.card {
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Estilos para a lista de voluntários */
+.container {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ... Estilos para os cards e outros estilos ... */
+
+/* Estilos para a bolinha de disponibilidade */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+    /* Ajuste a cor e o tamanho da bolinha vermelha conforme necessário */
+}

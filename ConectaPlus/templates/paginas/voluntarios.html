@@ -1,0 +1,31 @@
+{% extends 'paginas/base.html' %} 
+{% block conteudo %}
+
+<h1>Voluntários:</h1>
+<div class="container">
+    <h1>Lista de Voluntários</h1>
+    <div class="row">
+        {% if voluntarios %}
+        {% for voluntario in voluntarios %}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <!--colocar imagem-->
+                        <h5 class="card-title">{{ voluntario.nome }}</h5>
+                        <p class="card-text">{{ voluntario.status }}</p>
+                        <p class="card-text">Localização: {{ voluntario.cidade }}, {{ voluntario.estado }}</p>
+                        <div class="availability">
+                            {% if voluntario.disponivel %}
+                                <span class="dot green"></span>
+                            {% else %}
+                                <span class="dot red"></span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
