@@ -14,3 +14,6 @@ def projetos(request):
 
 def caçadores(request):
     return render(request, 'paginas/caçadores.html')
+
+def voluntarios(request):
+    return render(request, 'paginas/voluntarios.html')
