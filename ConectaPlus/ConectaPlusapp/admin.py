@@ -1,8 +1,9 @@
 from django.contrib import admin
 
 # Register your models here.
-
-from .models import Perfil, Projeto
+#superuser: host
+#senha: 123
+from .models import Perfil, Projeto, Voluntario
 
 class ListandoPerfil(admin.ModelAdmin):
     list_display = ("id", "name")
@@ -18,3 +19,10 @@ class ListandoProjeto(admin.ModelAdmin):
     search_fields = ("name",)
 
 admin.site.register(Projeto, ListandoProjeto)
+
+class ListandoVoluntario(admin.ModelAdmin):
+    list_display = ("id", "name")
+    list_display_links =("id", "name")
+    search_fields = ("name",)
+
+admin.site.register(Voluntario)

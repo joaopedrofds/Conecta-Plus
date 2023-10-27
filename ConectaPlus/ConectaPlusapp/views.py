@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http.response import HttpResponse
+from .models import Voluntario
 
 
 def teste(request):
@@ -16,4 +17,6 @@ def caçadores(request):
     return render(request, 'paginas/caçadores.html')
 
 def voluntarios(request):
-    return render(request, 'paginas/voluntarios.html')
+    voluntarios = Voluntario.objects.all()
+    context = {'voluntarios': voluntarios}
+    return render(request, 'paginas/voluntarios.html', context)
